@@ -29,6 +29,7 @@ var app = new Vue({
         },
         expYears: function(val) {
             (val >= "5") ? this.pos = 5: this.pos = val;
+            if (val <= "0") this.pos = 1;
             this.salary = this.coeff[this.pos - 1] * this.lang;
             }
     }
